@@ -28,7 +28,6 @@ export const getUser = asyncHandler(async (req, res) => {
 export const updateUser = asyncHandler(async (req, res) => {
   const userInfo = req.user;
 
-  console.log("Name:", req.body.name);
   const { error } = updateUserSchema.validate(req.body);
   if (error) {
     console.log("Validation error:", error.details[0].message);
